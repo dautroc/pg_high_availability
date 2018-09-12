@@ -1,4 +1,4 @@
-## Use this query to list of the top 20 largest tables in current database:
+### Use this query to list of the top 20 largest tables in current database:
 
 ```sql
 SELECT oid::REGCLASS::TEXT AS table_name,
@@ -12,7 +12,7 @@ ORDER BY pg_total_relation_size(oid) DESC
 LIMIT 20;
 ```
 
-## Use this query to list of the top 20 largest indexes in current database:
+### Use this query to list of the top 20 largest indexes in current database:
 
 ```sql
 SELECT indexrelid::REGCLASS::TEXT AS index_name,
@@ -25,7 +25,7 @@ ORDER BY pg_relation_size(indexrelid) DESC
 LIMIT 20;
 ```
 
-## Use this query to find the top 20 most active tables by determining the ones that receive the most inserts, updates, deletes:
+### Use this query to find the top 20 most active tables by determining the ones that receive the most inserts, updates, deletes:
 
 ```sql
 SELECT relid::REGCLASS AS table_name,
@@ -37,7 +37,7 @@ ORDER BY (n_tup_ins + n_tup_upd + n_tup_hot_upd + n_tup_del) DESC
 LIMIT 20;
 ```
 
-## Use this query to obtain top tables with fetch activity by checking index and table scans:
+### Use this query to obtain top tables with fetch activity by checking index and table scans:
 
 ```sql
 SELECT relid::REGCLASS AS table_name,
@@ -51,7 +51,7 @@ ORDER BY (coalesce(seq_scan, 0)) + coalesce(idx_scan, 0) DESC,
 LIMIT 20;
 ```
 
-## Use this query for the top 20 indexes with read activity in the current database
+### Use this query for the top 20 indexes with read activity in the current database
 
 ```sql
 SELECT indexrelid::REGCLASS AS index_name,

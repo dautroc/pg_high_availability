@@ -1,1 +1,1 @@
-# Reference: PostgreSQL High Availability Cookbook by Shaun Thomas
+### Reference: PostgreSQL High Availability Cookbook by Shaun Thomas
