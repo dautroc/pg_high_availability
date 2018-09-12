@@ -1,1 +1,1 @@
-# pg_high_availability
+# Reference: PostgreSQL High Availability Cookbook by Shaun Thomas
